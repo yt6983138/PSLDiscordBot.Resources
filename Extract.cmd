@@ -1,0 +1,2 @@
+md Download
+phi-info-extract --download-apk TAPTAP --apk Download/apk.apk --download-classdata AUTO --classdata Download/classdata.tpk --extract-asset-to . --extract-info-to ./Info --no-illustration --no-music --no-charts --language All
