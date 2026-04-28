@@ -1,12 +1,18 @@
 /**
  * @typedef {Object} GameRecord
+ * @property {SongScore} Score
+ * @property {Number} ChartConstant
+ * @property {Number} Rks
+ * @property {string} Name
+ * @property {string} NameOrDefault
+ */
+/**
+ * @typedef {Object} SongScore
  * @property {Number} Score
  * @property {Number} Accuracy
- * @property {Number} ChartConstant
  * @property {string} Id
  * @property {Difficulty} Difficulty
  * @property {Status} Status
- * @property {Number} Rks
  */
 
 /**
@@ -43,9 +49,8 @@ const ExistingPSLKeys = [
     "PSL_FILES",
     "ASSET_FOLDER",
     "INFO_IMAGE_PATHS",
+    "PLAYER_DATA",
     "INFO",
-    "INFO_MAP_DIFFICULTY",
-    "INFO_MAP_ID_NAME",
 ];
 
 const ExampleIllustration = "./ExampleIllustration2.png";
@@ -199,7 +204,7 @@ function GetAvatarFilePath() {
 }
 
 function GetUserPrecisionInt() {
-    return window.INFO.User.Data.ShowFormat.split("0").length - 1;
+    return window.PLAYER_DATA.User.Data.ShowFormat.split("0").length - 1;
 }
 
 function FloatToUserPrecisionString(f) {
@@ -207,7 +212,7 @@ function FloatToUserPrecisionString(f) {
 }
 
 function GetRks() {
-    return window.INFO.User.Rks;
+    return window.PLAYER_DATA.User.Rks;
 }
 
 function GetRksFormatted() {
@@ -215,7 +220,7 @@ function GetRksFormatted() {
 }
 
 function GetMoneyFormatted() {
-    const moni = INFO.UserProgress.Money;
+    const moni = PLAYER_DATA.UserProgress.Money;
     let str = "";
 
     if (moni.PiB > 0) str += `${moni.PiB} PiB, `;
@@ -236,17 +241,17 @@ function GetCMBackgroundFilePath() {
         PathJoin(
             window.ASSET_FOLDER,
             "Misc",
-            window.INFO.UserProgress.ChallengeModeRank.Rank.toString()
+            window.PLAYER_DATA.UserProgress.ChallengeModeRank.Rank.toString()
         ) + ".png"
     );
 }
 
 function GetCMLevel() {
-    return window.INFO.UserProgress.ChallengeModeRank.Level;
+    return window.PLAYER_DATA.UserProgress.ChallengeModeRank.Level;
 }
 
 function GetUserNickName() {
-    return window.INFO.UserInfo.NickName;
+    return window.PLAYER_DATA.UserInfo.NickName;
 }
 
 function GetUserBackground() {
@@ -273,7 +278,7 @@ function GetLowResIllustrationPath(id) {
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id + ".0",
+        id,
         "IllustrationLowRes.png"
     );
 }
@@ -284,7 +289,7 @@ function GetIllustrationPath(id) {
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id + ".0",
+        id,
         "Illustration.png"
     );
 }
@@ -295,28 +300,33 @@ function GetIllustrationBlurPath(id) {
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id + ".0",
+        id,
         "IllustrationBlur.png"
     );
 }
 
+/**
+ *
+ * @param {number} index
+ * @returns {GameRecord}
+ */
 function GetRecord(index) {
-    return window.INFO.Records[index];
+    return window.PLAYER_DATA.Records[index];
 }
 
 function GetRecordCount() {
-    return window.INFO.Records.length;
+    return window.PLAYER_DATA.Records.length;
 }
 
 function GetRecordLowResIllustrationPath(record) {
-    return GetLowResIllustrationPath(record.Id);
+    return GetLowResIllustrationPath(record.Score.Id);
 }
 
 function GetRecordRankImagePath(record) {
     if (ExampleMode) return "./ExampleRank.png";
 
     return (
-        PathJoin(window.ASSET_FOLDER, "Misc", RankIdToName(record.Status)) +
+        PathJoin(window.ASSET_FOLDER, "Misc", RankIdToName(record.Score.Status)) +
         ".png"
     );
 }

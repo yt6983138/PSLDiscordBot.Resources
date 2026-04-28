@@ -468,10 +468,10 @@
         }:${("0" + now.getMinutes().toString()).slice(-2)}:${(
             "0" + now.getSeconds().toString()
         ).slice(-2)} ${now.getHours() > 12 ? "PM" : "AM"}`;
-        document.getElementById("SyncTime").textContent = `Synced ${FormatDateOffset(new Date(window.INFO.SaveModificationDate), now)} ago`;
+        document.getElementById("SyncTime").textContent = `Synced ${FormatDateOffset(new Date(window.PLAYER_DATA.SaveModificationDate), now)} ago`;
 
         if (ExampleMode) {
-            window.INFO.ExtraArguments = {
+            window.PLAYER_DATA.ExtraArguments = {
                 "ShowCount": 40,
                 "LowerBound": 0,
                 "AllowedGrades": [
@@ -492,12 +492,12 @@
         }
 
 
-        let lowerBound = window.INFO.ExtraArguments.LowerBound;
+        let lowerBound = window.PLAYER_DATA.ExtraArguments.LowerBound;
         let maxCount = GetRecordCount();
-		let maxShowingCount = window.INFO.ExtraArguments.ShowCount;
-		let allowed = window.INFO.ExtraArguments.AllowedGrades;
-		let ccHigherBound = window.INFO.ExtraArguments.CCHigherBound;
-		let ccLowerBound = window.INFO.ExtraArguments.CCLowerBound;
+		let maxShowingCount = window.PLAYER_DATA.ExtraArguments.ShowCount;
+		let allowed = window.PLAYER_DATA.ExtraArguments.AllowedGrades;
+		let ccHigherBound = window.PLAYER_DATA.ExtraArguments.CCHigherBound;
+		let ccLowerBound = window.PLAYER_DATA.ExtraArguments.CCLowerBound;
 
         let table = document.getElementById("Scores");
         let tr = document.createElement("tr");
@@ -511,7 +511,7 @@
 
 			const record = GetRecord(i);
 
-			if (!allowed.includes(record.Status)
+			if (!allowed.includes(record.Score.Status)
                 || record.ChartConstant >= ccHigherBound
                 || record.ChartConstant <= ccLowerBound) {
 				i++;
@@ -533,11 +533,11 @@
             leftInfos.appendChild(document.createElement("hr"));
             leftInfos.appendChild(document.createElement("hr"));
             leftInfos.appendChild(
-                CreateTextForLeftInfos(record.Score, "0rem")
+                CreateTextForLeftInfos(record.Score.Score, "0rem")
             );
             leftInfos.appendChild(
                 CreateTextForLeftInfos(
-                    FloatToUserPrecisionString(record.Accuracy) + "%",
+                    FloatToUserPrecisionString(record.Score.Accuracy) + "%",
                     "31rem"
                 )
             );
@@ -550,7 +550,7 @@
             leftInfos.appendChild(
                 CreateTextForLeftInfos(
                     `${record.ChartConstant} ${
-                        RecordDifficultyToName[record.Difficulty]
+                        RecordDifficultyToName[record.Score.Difficulty]
                     }`,
                     "92rem"
                 )

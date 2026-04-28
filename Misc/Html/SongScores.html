@@ -272,6 +272,7 @@
                 }
             }
         }
+
         #Advertisement {
             position: absolute;
             top: 474rem;
@@ -315,29 +316,33 @@
     async function Initialize() {
         await InitializePSLRender();
 
-        if (ExampleMode || window.INFO.ExtraArguments == null) {
-            window.INFO.ExtraArguments = {
+        if (ExampleMode || window.PLAYER_DATA.ExtraArguments == null) {
+            window.PLAYER_DATA.ExtraArguments = {
                 "Searched": {
-                    "Chronostasis.黒皇帝": [
+                    "Chronostasis.黒皇帝.0": [
                         {
-                            "Score": 1000000,
-                            "Accuracy": 100,
+                            "Score": {
+                                "Score": 1000000,
+                                "Accuracy": 100,
+                                "Id": "Chronostasis.黒皇帝.0",
+                                "Difficulty": 2,
+                                "Status": 2,
+                            },
                             "ChartConstant": 15.3,
-                            "Id": "Chronostasis.黒皇帝",
-                            "Difficulty": 2,
-                            "Status": 2,
-                            "Rks": 15.300000190734863
+                            "Rks": 15.300000190734863,
+                            "NameOrDefault": "Chronostasis",
+                            "Name": "Chronostasis"
                         }
                     ]
                 },
                 "SearchRanks": [ // this should be sorted
                     {
-                        "SongId": "Chronostasis.黒皇帝",
+                        "SongId": "Chronostasis.黒皇帝.0",
                         "Alias": ["chrono", "cs"],
                         "Score": 0.99
                     },
                     {
-                        "SongId": "Nima.Test", // just testing
+                        "SongId": "Nima.Test.0", // just testing
                         "Alias": ["nima", "test"],
                         "Score": 0.8
                     }
@@ -345,17 +350,22 @@
             }
         }
 
-        let id = window.INFO.ExtraArguments.SearchRanks[0].SongId;
-        let searchedFirstRecords = window.INFO.ExtraArguments.Searched[id];
+        let id = window.PLAYER_DATA.ExtraArguments.SearchRanks[0].SongId;
+        let searchedFirstRecords = window.PLAYER_DATA.ExtraArguments.Searched[id];
 
         document.body.style.backgroundImage = "url('" + GetUserBackgroundBlur() + "')";
 
         document.getElementById("Illustration").src = GetLowResIllustrationPath(id);
-        document.getElementById("IllustrationDescription").textContent = "FOR: " + window.INFO_MAP_ID_NAME[id];
+        document.getElementById("IllustrationDescription").textContent = "FOR: " + searchedFirstRecords[0].Name;
 
         let table = document.getElementById("Scores");
         for (let i = 0; i < 4; i++) {
-            if (id !== "Chronostasis.黒皇帝" && window.INFO_MAP_DIFFICULTY[id][i] === 0) break; // easter egg
+            const infoEntry = window.INFO.Songs.filter(x => x.Id === id)[0];
+            if (!infoEntry.Levels[RecordDifficultyToName[i]]) {
+                if (id !== "Chronostasis.黒皇帝.0") break;
+
+                infoEntry.Levels[RecordDifficultyToName[i]] = 0;
+            }
 
             let record = SearchByDifficultyInRecords(searchedFirstRecords, i);
 
@@ -402,9 +412,9 @@
             tr.appendChild(score);
             tr.appendChild(acc);
             tr.appendChild(rks);
-            ccAndDiff.textContent = `${RecordDifficultyToName[i]} ${window.INFO_MAP_DIFFICULTY[id][i]}`;
-            score.textContent = record === null ? "000000" : record.Score.toString();
-            acc.textContent = FloatToUserPrecisionString(record === null ? 0 : record.Accuracy) + '%';
+            ccAndDiff.textContent = `${RecordDifficultyToName[i]} ${infoEntry.Levels[RecordDifficultyToName[i]].ChartConstant}`;
+            score.textContent = record === null ? "000000" : record.Score.Score.toString();
+            acc.textContent = FloatToUserPrecisionString(record === null ? 0 : record.Score.Accuracy) + '%';
             rks.textContent = FloatToUserPrecisionString(record === null ? 0 : record.Rks);
 
             if (GetUserPrecisionInt() > 5) {
@@ -425,7 +435,7 @@
      */
     function SearchByDifficultyInRecords(records, diff) {
         for (const record of records) {
-            if (record.Difficulty === diff)
+            if (record.Score.Difficulty === diff)
                 return record;
         }
         return null;

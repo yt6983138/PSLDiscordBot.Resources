@@ -683,17 +683,21 @@
         await InitializePSLRender();
 
         if (ExampleMode) {
-            window.INFO.ExtraArguments = {
-                MemorablePerformance: {
-                    "Score": 999618,
-                    "Accuracy": 99.95752716064453,
-                    "ChartConstant": 15.7,
-                    "Id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR",
-                    "Difficulty": 3,
-                    "Status": 1,
-                    "Rks": 15.670377192282507
+            window.PLAYER_DATA.ExtraArguments = {
+                "MemorablePerformance": {
+                    "Score": {
+                        "Score": 999618,
+                        "Accuracy": 99.95753,
+                        "Id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0",
+                        "Difficulty": 3,
+                        "Status": 1
+                    },
+                    "NameOrDefault": "TECHNOPOLIS 2085",
+                    "Name": "TECHNOPOLIS 2085",
+                    "ChartConstant": 15.9,
+                    "Rks": 15.869999685805674
                 },
-                Thoughts: "<color=#00ffff>啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳愛愛愛愛愛😍啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥嗯嗯👿滴滴😈唔😱嘟⬅️嘟↖️嘟⬆️嘟↗️嘟➡️嘟↘️嘟⬇️</color>"
+                "Thoughts": "啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳愛愛愛愛愛😍啊"
             };
         }
 
@@ -708,13 +712,13 @@
 
         if (GetCMLevel() === 0) document.getElementById("CMImage").parentElement.remove();
 
-        document.getElementById("Left").appendChild(ConvertUnityRichText(INFO.GameUserInfo.Intro, 16));
+        document.getElementById("Left").appendChild(ConvertUnityRichText(window.PLAYER_DATA.GameUserInfo.Intro, 16));
         const now = new Date(Date.now());
         const generated = `${now.getHours() > 12 ? now.getHours() - 12 : now.getHours()}:${
             ("0" + now.getMinutes().toString()).slice(-2)}:${
             ("0" + now.getSeconds().toString()).slice(-2)} ${
             now.getHours() > 12 ? "PM" : "AM"}`;
-        const synced = FormatDateOffset(new Date(window.INFO.SaveModificationDate), now);
+        const synced = FormatDateOffset(new Date(window.PLAYER_DATA.SaveModificationDate), now);
 
         document.getElementById("DateTime").textContent = `Generated at ${generated}, synced ${synced} ago.`;
 
@@ -722,16 +726,16 @@
             SetupStatisticBlock(diff + "Statistics", diff);
         }
 
-        const memorablePerformance = window.INFO.ExtraArguments.MemorablePerformance;
-        const thoughts = window.INFO.ExtraArguments.Thoughts;
+        const memorablePerformance = window.PLAYER_DATA.ExtraArguments.MemorablePerformance;
+        const thoughts = window.PLAYER_DATA.ExtraArguments.Thoughts;
 
         if (memorablePerformance && thoughts) {
         document.getElementById("MemorablePerformanceImage").style.backgroundImage = `url("${GetRecordLowResIllustrationPath(memorablePerformance)}")`;
         document.getElementById("MemorablePerformanceRank").firstElementChild.src = GetRecordRankImagePath(memorablePerformance);
         document.getElementById("MemorablePerformance").appendChild(ConvertUnityRichText(thoughts, 16));
-        document.getElementById("MemorablePerformanceFirstLine").textContent = `${memorablePerformance.Score} / ${memorablePerformance.Accuracy.toFixed(GetUserPrecisionInt())}%`;
+        document.getElementById("MemorablePerformanceFirstLine").textContent = `${memorablePerformance.Score.Score} / ${memorablePerformance.Score.Accuracy.toFixed(GetUserPrecisionInt())}%`;
         document.getElementById("MemorablePerformanceSecondLine").textContent =
-            `${memorablePerformance.Rks.toFixed(GetUserPrecisionInt())} / ${memorablePerformance.ChartConstant.toFixed(1)} ${RecordDifficultyToName[memorablePerformance.Difficulty]}`;
+            `${memorablePerformance.Rks.toFixed(GetUserPrecisionInt())} / ${memorablePerformance.ChartConstant.toFixed(1)} ${RecordDifficultyToName[memorablePerformance.Score.Difficulty]}`;
         } else {
             document.getElementById("MemorablePerformance").style.display = "none";
         }
@@ -769,7 +773,7 @@
         const fc = bars.querySelector(".FCBar");
         const clear = bars.querySelector(".ClearBar");
 
-        const statistics = window.INFO.User.PlayStatistics;
+        const statistics = window.PLAYER_DATA.User.PlayStatistics;
 
         const totalCount = statistics[`TotalSong${difficulty}Count`];
 
