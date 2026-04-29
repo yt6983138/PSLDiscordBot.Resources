@@ -364,7 +364,7 @@
             if (!infoEntry.Levels[RecordDifficultyToName[i]]) {
                 if (id !== "Chronostasis.黒皇帝.0") break;
 
-                infoEntry.Levels[RecordDifficultyToName[i]] = 0;
+                infoEntry.Levels[RecordDifficultyToName[i]] = { ChartConstant: 0 };
             }
 
             let record = SearchByDifficultyInRecords(searchedFirstRecords, i);
