@@ -512,8 +512,8 @@
 			const record = GetRecord(i);
 
 			if (!allowed.includes(record.Score.Status)
-                || record.ChartConstant >= ccHigherBound
-                || record.ChartConstant <= ccLowerBound) {
+                || record.ChartConstant >= (ccHigherBound + 0.01)
+                || record.ChartConstant <= (ccLowerBound - 0.01)) {
 				i++;
 				continue;
 			}
