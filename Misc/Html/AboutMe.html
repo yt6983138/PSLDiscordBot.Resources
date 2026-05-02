@@ -466,6 +466,7 @@
                 }
             }
         }
+
         .Circles {
             position: absolute;
             border-radius: 50%;
@@ -730,12 +731,12 @@
         const thoughts = window.PLAYER_DATA.ExtraArguments.Thoughts;
 
         if (memorablePerformance && thoughts) {
-        document.getElementById("MemorablePerformanceImage").style.backgroundImage = `url("${GetRecordLowResIllustrationPath(memorablePerformance)}")`;
-        document.getElementById("MemorablePerformanceRank").firstElementChild.src = GetRecordRankImagePath(memorablePerformance);
-        document.getElementById("MemorablePerformance").appendChild(ConvertUnityRichText(thoughts, 16));
-        document.getElementById("MemorablePerformanceFirstLine").textContent = `${memorablePerformance.Score.Score} / ${memorablePerformance.Score.Accuracy.toFixed(GetUserPrecisionInt())}%`;
-        document.getElementById("MemorablePerformanceSecondLine").textContent =
-            `${memorablePerformance.Rks.toFixed(GetUserPrecisionInt())} / ${memorablePerformance.ChartConstant.toFixed(1)} ${RecordDifficultyToName[memorablePerformance.Score.Difficulty]}`;
+            document.getElementById("MemorablePerformanceImage").style.backgroundImage = `url("${GetRecordLowResIllustrationPath(memorablePerformance)}")`;
+            document.getElementById("MemorablePerformanceRank").firstElementChild.src = GetRecordRankImagePath(memorablePerformance);
+            document.getElementById("MemorablePerformance").appendChild(ConvertUnityRichText(thoughts, 16));
+            document.getElementById("MemorablePerformanceFirstLine").textContent = `${memorablePerformance.Score.Score} / ${memorablePerformance.Score.Accuracy.toFixed(GetUserPrecisionInt())}%`;
+            document.getElementById("MemorablePerformanceSecondLine").textContent =
+                `${memorablePerformance.Rks.toFixed(GetUserPrecisionInt())} / ${memorablePerformance.ChartConstant.toFixed(1)} ${RecordDifficultyToName[memorablePerformance.Score.Difficulty]}`;
         } else {
             document.getElementById("MemorablePerformance").style.display = "none";
         }
@@ -787,9 +788,144 @@
         clearCount -= fcCount;
         fcCount -= apCount;
 
-        SetupStatisticBar(ap, 46, totalCount, apCount, "AP");
-        SetupStatisticBar(fc, 29, totalCount, fcCount, "FC");
-        SetupStatisticBar(clear, 12, totalCount, clearCount, "Cleared");
+        const l1Height = 12;
+        const l2Height = 29;
+        const l3Height = 46;
+
+        let apElements = SetupStatisticBar(ap, l3Height, totalCount, apCount, "AP");
+        let fcElements = SetupStatisticBar(fc, l2Height, totalCount, fcCount, "FC");
+        let clearElements = SetupStatisticBar(clear, l1Height, totalCount, clearCount, "Cleared");
+
+        let elements = [];
+        if (apElements !== null) elements.push(apElements);
+        if (fcElements !== null) elements.push(fcElements);
+        if (clearElements !== null) elements.push(clearElements);
+
+        let hasAnyOverflow = elements.some(x => HasTextOverFlow(x.text));
+        if (!hasAnyOverflow) return;
+
+        const viewPortSize = GetViewportSize();
+        let leftBoundary = GetElementXAndY(elements[0].verticalLine);
+        leftBoundary =
+            leftBoundary.x + leftBoundary.width + viewPortSize.width * 0.03
+
+        // not touching first since first should always align to left and never overflow
+        if (elements.length === 1) return;
+        if (elements.length === 2) {
+            const singleElementToSolve = elements[1];
+
+            const verticalLineX = GetElementXAndY(singleElementToSolve.verticalLine).x;
+            const width = GetElementXAndY(singleElementToSolve.text).width;
+
+            if (verticalLineX - width > leftBoundary) {
+                FlipStatisticObjects(singleElementToSolve.bottomLine, singleElementToSolve.text);
+                return;
+            }
+        }
+
+        const noFirst = elements.slice(1);
+        const rightBoundary = viewPortSize.width * 0.955;
+
+        const heights = [l1Height, l2Height];
+        const flips = [true, false];
+        const width1 = GetElementXAndY(noFirst[0].text).width;
+        const width2 = GetElementXAndY(noFirst[1].text).width;
+        const x1 = GetElementXAndY(noFirst[0].verticalLine).x;
+        const x2 = GetElementXAndY(noFirst[1].verticalLine).x;
+
+        let solutions = [];
+        for (let i = 0; i < heights.length; i++) {
+            let firstHeight = heights[i]
+            let secondHeight = heights[heights.length - i - 1];
+
+            for (let firstFlip of flips) {
+                for (let secondFlip of flips) {
+
+                    const item1 = {x: x1, width: width1, height: firstHeight, flipped: firstFlip};
+                    const item2 = {x: x2, width: width2, height: secondHeight, flipped: secondFlip};
+
+                    const PushSolution = (overlappingSize) => {
+                        solutions.push({
+                            firstHeight: firstHeight,
+                            secondHeight: secondHeight,
+                            firstFlip: firstFlip,
+                            secondFlip: secondFlip,
+                            overlappingSize: overlappingSize
+                        });
+                    };
+                    const GetSpan = (item) => {
+                        const start = item.flipped ? item.x - item.width : item.x;
+                        const end = item.flipped ? item.x : item.x + item.width;
+                        return {
+                            start: start,
+                            end: end,
+                            verticalLineX: item.flipped ? end : start,
+                            height: item.height,
+                            isFlipped: item.flipped
+                        };
+                    };
+
+                    const span1 = GetSpan(item1);
+                    const span2 = GetSpan(item2);
+
+                    span1.overlapLeft = leftBoundary - span1.start;
+                    span2.overlapLeft = leftBoundary - span2.start;
+                    span1.overlapRight = span1.end - rightBoundary;
+                    span2.overlapRight = span2.end - rightBoundary;
+
+                    const IsInRange = (low, v, high) => low < v && v < high;
+                    const HasHit = (spanFirst, spanLatter) => {
+                        const ret = -10000;
+                        if (spanFirst.height > spanLatter.height) {
+                            if (!spanLatter.isFlipped) return ret;
+
+                            if (IsInRange(spanLatter.start, spanFirst.verticalLineX, spanLatter.end))
+                                return spanFirst.verticalLineX - spanLatter.start
+                        }
+                        else {
+                            if (!spanFirst.isFlipped) return ret;
+
+                            if (IsInRange(spanFirst.start, spanLatter.verticalLineX, spanFirst.end))
+                                return spanLatter.verticalLineX - spanFirst.start;
+                        }
+                        return ret;
+                    };
+
+                    const hit = HasHit(span1, span2);
+
+                    const maxHit = Math.max(
+                        hit,
+                        span1.overlapLeft,
+                        span2.overlapLeft,
+                        span1.overlapRight,
+                        span2.overlapRight
+                    );
+
+                    PushSolution(maxHit);
+                }
+            }
+        }
+
+        solutions.sort((x, y) => x.overlappingSize - y.overlappingSize)
+        let solution = solutions[0];
+
+        noFirst[0].verticalLine.style.height = solution.firstHeight.toString() + "rem";
+        noFirst[1].verticalLine.style.height = solution.secondHeight.toString() + "rem";
+
+        if (solution.firstFlip) FlipStatisticObjects(noFirst[0].bottomLine, noFirst[0].text);
+        if (solution.secondFlip) FlipStatisticObjects(noFirst[1].bottomLine, noFirst[1].text);
+    }
+
+    function FlipStatisticObjects(bottomLine, text) {
+        text.style.right = window.getComputedStyle(text).getPropertyValue("left");
+        text.style.left = "unset";
+
+        bottomLine.style.right = "0";
+    }
+
+    function HasTextOverFlow(textElement, boundPercent = 0.955) {
+        const size = GetElementXAndY(textElement);
+        return size.x + size.width > GetViewportSize().width * boundPercent;
     }
 
     function SetupStatisticBar(element, verticalLineLength, totalCount, actualCount, name) {
@@ -804,10 +940,12 @@
 
         if (actualCount === 0) {
             element.remove();
-            return;
+            return null;
         }
 
         text.textContent = `${name} ${FloatToUserPrecisionString(percent)}% ${actualCount}/${totalCount}`;
+
+        return {verticalLine: verticalLine, bottomLine: bottomLine, text: text};
     }
 
     Initialize();
