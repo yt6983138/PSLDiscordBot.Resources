@@ -382,7 +382,7 @@
             statusBackground.classList.add("StatusBackground");
             statusImage.classList.add("Status");
             statusImage.src = record === null
-                ? PathJoin(window.ASSET_FOLDER, "Misc", "False.png")
+                ? GetRecordRankImagePathByType(Status.False)
                 : GetRecordRankImagePath(record);
 
             let decorationLine = document.createElement("div");

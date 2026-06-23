@@ -163,7 +163,7 @@ function MakeExampleValue() {
                     "Score": 1000000,
                     "Accuracy": 100,
                     "Id": "BetterGraphicAnimation.ルゼ.0",
-                    "Difficulty": 2,
+                    "Difficulty": 4,
                     "Status": 2
                 },
                 "NameOrDefault": "Better Graphic Animation",
@@ -640,6 +640,33 @@ function MakeExampleValue() {
      */
     window.INFO = {
         "Songs": [
+            {
+                "Id": "Chronostasis.黒皇帝.0", // this is fake data
+                "Key": "Chronostasis",
+                "Name": "Chronostasis",
+                "Composer": "Maozon",
+                "Illustrator": "Lanota © Noxy Games Inc. ",
+                "PreviewStartTimeSeconds": 42.67,
+                "PreviewEndTimeSeconds": 65.33,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "空の希",
+                        "ChartConstant": 5
+                    },
+                    "HD": {
+                        "Charter": "空の希",
+                        "ChartConstant": 10.1
+                    },
+                    "IN": {
+                        "Charter": "ST AS is XMT",
+                        "ChartConstant": 15.3
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/music.wav"
+            },
             {
                 "Id": "Stasis.Maozon.0",
                 "Key": "Stasis",

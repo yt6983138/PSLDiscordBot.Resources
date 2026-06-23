@@ -22,7 +22,9 @@ const Difficulty = {
     "EZ": 0,
     "HD": 1,
     "IN": 2,
-    "AT": 3
+    "AT": 3,
+    "Legacy": 4,
+    "SP": 5
 }
 /**
  * @enum {Status}
@@ -55,7 +57,7 @@ const ExistingPSLKeys = [
 
 const ExampleIllustration = "./ExampleIllustration2.png";
 
-const RecordDifficultyToName = ["EZ", "HD", "IN", "AT"];
+const RecordDifficultyToName = ["EZ", "HD", "IN", "AT", "Legacy", "SP"];
 const _RankIdToName = ["NotFc", "Fc", "Phi", "Vu", "S", "A", "B", "C", "False"];
 
 async function InitializePSLRender() {
@@ -323,10 +325,13 @@ function GetRecordLowResIllustrationPath(record) {
 }
 
 function GetRecordRankImagePath(record) {
+    return GetRecordRankImagePathByType(record.Score.Status)
+}
+function GetRecordRankImagePathByType(type) {
     if (ExampleMode) return "./ExampleRank.png";
 
     return (
-        PathJoin(window.ASSET_FOLDER, "Misc", RankIdToName(record.Score.Status)) +
+        PathJoin(window.ASSET_FOLDER, "Misc", RankIdToName(type)) +
         ".png"
     );
 }

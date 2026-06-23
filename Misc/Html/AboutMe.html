@@ -724,6 +724,7 @@
         document.getElementById("DateTime").textContent = `Generated at ${generated}, synced ${synced} ago.`;
 
         for (const diff in Difficulty) {
+            if (diff === RecordDifficultyToName[Difficulty.Legacy]) break; // skip legacy etc, TODO: legacy support?
             SetupStatisticBlock(diff + "Statistics", diff);
         }
 
