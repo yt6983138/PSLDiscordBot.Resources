@@ -63,14 +63,6 @@ const _RankIdToName = ["NotFc", "Fc", "Phi", "Vu", "S", "A", "B", "C", "False"];
 async function InitializePSLRender() {
     debugger;
 
-    for (let t in ExistingPSLKeys) {
-        t = ExistingPSLKeys[t];
-        if (window[t] === undefined) {
-            console.warn(`${t} is not present! using example value.`);
-            ExampleMode = true;
-        }
-    }
-
     if (ExampleMode) {
         let response = await fetch("./Example.js");
         let txt = await response.text();
@@ -369,8 +361,13 @@ function GetViewportSize() {
     };
 }
 
+let _setReadyTrue = false
 function SetReady(ye) {
-    window.pslReady = ye;
+    // i don't wanna change too much code so i just call debugger conditionally
+    if (ye && !_setReadyTrue) {
+        _setReadyTrue = true;
+        debugger; // syscall
+    }
 }
 
 /**
