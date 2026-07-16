@@ -63,6 +63,14 @@ const _RankIdToName = ["NotFc", "Fc", "Phi", "Vu", "S", "A", "B", "C", "False"];
 async function InitializePSLRender() {
     debugger;
 
+    for (let t in ExistingPSLKeys) {
+        t = ExistingPSLKeys[t];
+        if (window[t] === undefined) {
+            console.warn(`${t} is not present! using example value.`);
+            ExampleMode = true;
+        }
+    }
+
     if (ExampleMode) {
         let response = await fetch("./Example.js");
         let txt = await response.text();
