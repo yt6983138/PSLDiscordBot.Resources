@@ -505,7 +505,7 @@
         tr.appendChild(CreateScoreTd());
 
         let realElapsed = 0;
-		let i = lowerBound;
+		let i = Math.max(lowerBound - 1, 0);
         while (true) {
 			if (i >= maxCount || realElapsed >= maxShowingCount) break;
 
@@ -581,7 +581,7 @@
             numberBackground.appendChild(numberLine);
             const number = document.createElement("p");
             numberBackground.appendChild(number);
-            number.textContent = `#${i < 3 ? "φ" + (i + 1).toString() : i - 2}`;
+            number.textContent = `#${i < 3 ? "φ" + (i + 1).toString() : i + 1}`;
 
             realElapsed++;
 			i++;
