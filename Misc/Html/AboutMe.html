@@ -702,6 +702,18 @@
             };
         }
 
+        const statistics = window.PLAYER_DATA.User.PlayStatistics;
+
+        if (window.PLAYER_DATA.User.Data.IsInternational) {
+            statistics.TotalSongEZCount -= 1; // beethoven
+            statistics.TotalSongHDCount -= 1;
+            statistics.TotalSongINCount -= 1;
+        }
+
+        if (!window.PLAYER_DATA.Records.some(x => x.Score.Id === "Introduction")) {
+            statistics.TotalSongEZCount -= 1;
+        }
+
         document.getElementById("Avatar").style.backgroundImage = `url('${GetAvatarFilePath()}')`;
         document.getElementById("UserBasicInfoBlock").style.backgroundImage = `url('${GetUserBackgroundBlur()}')`;
         document.getElementById("UserNickBlock").appendChild(ConvertUnityRichText(GetUserNickName(), 24));
