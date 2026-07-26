@@ -425,7 +425,9 @@
             }
         }
 
-        SetReady(true);
+        window.onload = () => {
+            SetReady(true);
+        };
     }
 
     /**

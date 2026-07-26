@@ -601,7 +601,9 @@
         SetDynamicWidth(vp.width);
         SetDynamicHeight(dat.y + dat.height);
 
-        SetReady(true);
+        window.onload = () => {
+            SetReady(true);
+        };
     }
 
     function CreateScoreTd() {

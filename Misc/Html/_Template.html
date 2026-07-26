@@ -62,7 +62,11 @@
 			async function Initialize() {
 				await InitializePSLRender();
 
-				SetReady(true);
+				// logic
+
+				window.onload = () => {
+					SetReady(true);
+				};
 			}
 			Initialize();
 		</script>

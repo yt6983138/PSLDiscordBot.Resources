@@ -774,7 +774,9 @@
             main.appendChild(element);
         }
 
-        SetReady(true);
+        window.onload = () => {
+            SetReady(true);
+        };
     }
 
     function SetupStatisticBlock(elementName, difficulty) {
