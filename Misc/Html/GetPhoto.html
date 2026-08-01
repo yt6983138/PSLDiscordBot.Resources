@@ -504,8 +504,17 @@
         table.appendChild(tr);
         tr.appendChild(CreateScoreTd());
 
+        let showCountOffset = 4;
+        let existingPhis = [];
+        for (let s = 0; s < Math.min(3, maxCount); s++) {
+            let record = GetRecord(s);
+            if (record.Score.Status !== Status.Phi || existingPhis.some(v => DeepEquals(v, record))) break;
+            existingPhis.push()
+            showCountOffset--;
+        }
+
         let realElapsed = 0;
-		let i = Math.max(lowerBound - 1, 0);
+		let i = Math.max(lowerBound <= 4 - showCountOffset ? lowerBound - 1 : lowerBound - showCountOffset, 0);
         while (true) {
 			if (i >= maxCount || realElapsed >= maxShowingCount) break;
 
@@ -581,7 +590,7 @@
             numberBackground.appendChild(numberLine);
             const number = document.createElement("p");
             numberBackground.appendChild(number);
-            number.textContent = `#${i < 3 ? "φ" + (i + 1).toString() : i + 1}`;
+            number.textContent = `#${i < 3 ? "φ" + (i + 1).toString() : i + showCountOffset}`;
 
             realElapsed++;
 			i++;
