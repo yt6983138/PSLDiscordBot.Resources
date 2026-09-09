@@ -487,7 +487,14 @@
                     Status.False
                 ],
                 "CCLowerBound": 0,
-                "CCHigherBound": 17
+                "CCHigherBound": 17,
+                "AllowedDifficulties": [
+                    Difficulty.EZ,
+                    Difficulty.HD,
+                    //Difficulty.IN,
+                    Difficulty.AT,
+                    Difficulty.Legacy
+                ]
             };
         }
 
@@ -495,9 +502,10 @@
         let lowerBound = window.PLAYER_DATA.ExtraArguments.LowerBound;
         let maxCount = GetRecordCount();
 		let maxShowingCount = window.PLAYER_DATA.ExtraArguments.ShowCount;
-		let allowed = window.PLAYER_DATA.ExtraArguments.AllowedGrades;
+		let allowedGrades = window.PLAYER_DATA.ExtraArguments.AllowedGrades;
 		let ccHigherBound = window.PLAYER_DATA.ExtraArguments.CCHigherBound;
 		let ccLowerBound = window.PLAYER_DATA.ExtraArguments.CCLowerBound;
+        let allowedDifficulties = window.PLAYER_DATA.ExtraArguments.AllowedDifficulties;
 
         let table = document.getElementById("Scores");
         let tr = document.createElement("tr");
@@ -520,7 +528,8 @@
 
 			const record = GetRecord(i);
 
-			if (!allowed.includes(record.Score.Status)
+			if (!allowedGrades.includes(record.Score.Status)
+                || !allowedDifficulties.includes(record.Score.Difficulty)
                 || record.ChartConstant >= (ccHigherBound + 0.01)
                 || record.ChartConstant <= (ccLowerBound - 0.01)) {
 				i++;
@@ -596,7 +605,7 @@
 			i++;
         }
 
-        if (realElapsed > 30 && allowed.length >= 10 && lowerBound === 0) {
+        if (realElapsed > 30 && allowedGrades.length >= 10 && lowerBound === 0) {
             document.getElementById("Overflow").style.display = "unset";
         }
 
