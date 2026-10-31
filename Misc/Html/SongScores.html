@@ -353,10 +353,12 @@
         let id = window.PLAYER_DATA.ExtraArguments.SearchRanks[0].SongId;
         let searchedFirstRecords = window.PLAYER_DATA.ExtraArguments.Searched[id];
 
+        let bestRecord = searchedFirstRecords.toSorted((a, b) => b.Rks - a.Rks)[0];
+
         document.body.style.backgroundImage = "url('" + GetUserBackgroundBlur() + "')";
 
-        document.getElementById("Illustration").src = GetLowResIllustrationPath(id);
-        document.getElementById("IllustrationDescription").textContent = "FOR: " + searchedFirstRecords[0].Name;
+        document.getElementById("Illustration").src = GetLowResIllustrationPath(bestRecord);
+        document.getElementById("IllustrationDescription").textContent = "FOR: " + bestRecord.Name;
 
         let table = document.getElementById("Scores");
         for (let i = 0; i < 4; i++) {

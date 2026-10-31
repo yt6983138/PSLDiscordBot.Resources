@@ -86,6 +86,7 @@ async function InitializePSLRender() {
 function ForceNormalizePath(str) {
     return str.replaceAll("\\", "/");
 }
+
 /**
  *
  * @param {string} paths
@@ -161,15 +162,12 @@ function ConvertUnityRichText(richText, baseFontSize = 16, onlyText = false) {
             let realSize = 0;
             console.debug(size);
             if (size.includes('+') || size.includes('-')) {
-                    realSize = baseFontSize + Number(size);
-            }
-            else if (size.includes('%')) {
-                    realSize = Number(size.replaceAll('%', "")) * 0.01 * baseFontSize;
-            }
-            else if (size.includes('px')) {
+                realSize = baseFontSize + Number(size);
+            } else if (size.includes('%')) {
+                realSize = Number(size.replaceAll('%', "")) * 0.01 * baseFontSize;
+            } else if (size.includes('px')) {
                 realSize = Number(size.replaceAll('px', ""));
-            }
-            else {
+            } else {
                 console.warn(`Invalid size ${size}`);
             }
             richText = richText.replace(reg[1], onlyText
@@ -184,8 +182,7 @@ function ConvertUnityRichText(richText, baseFontSize = 16, onlyText = false) {
     }
     if (onlyText) {
         richText = richText.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-    }
-    else {
+    } else {
         const element = document.createElement("p");
         if (baseFontSize !== null)
             element.style.fontSize = `${baseFontSize}rem`;
@@ -274,35 +271,105 @@ function GetUserBackgroundBlur() {
     return PathJoin(window.INFO_IMAGE_PATHS.User.BackgroundBasePath, "IllustrationBlur.png");
 }
 
-function GetLowResIllustrationPath(id) {
+function _LookupSongInfo(score) {
+    if (score) {
+        const id = score.Id;
+        return window.INFO.Songs.find(x => x.Id === id);
+    }
+    return null;
+}
+
+/**
+ * @returns { SongScore | null }
+ */
+function _NormalizeScore(score) {
+    if (score) {
+        if (score.Score === undefined || score.Score === null)
+            return null;
+
+        if (score.Score instanceof Number)
+            return score;
+
+        return score.Score;
+    }
+    return null;
+}
+function _GetSpecialDiff(score) {
+    if (typeof score == "string") return { id: score, diff: null };
+
+    score = _NormalizeScore(score);
+    if (score == null)
+        throw new Error(`Invalid id or score: ${JSON.stringify(score)}`);
+
+    const diffName = RecordDifficultyToName[score.Difficulty]
+    const info = _LookupSongInfo(score);
+    if (info == null) return { id: score.Id, diff: null };
+
+    const level = info.Levels[diffName];
+    if (level.HasDifferentCover) return { id: score.Id, diff: diffName };
+
+    return { id: score.Id, diff: null };
+}
+
+function GetLowResIllustrationPath(idOrScore) {
     if (ExampleMode) return ExampleIllustration;
+
+    const specialDiff = _GetSpecialDiff(idOrScore);
+    if (specialDiff.diff) {
+        return PathJoin(
+            window.ASSET_FOLDER,
+            "Tracks",
+            specialDiff.id,
+            `IllustrationLowRes_${specialDiff.diff}.png`
+        );
+    }
 
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id,
+        specialDiff.id,
         "IllustrationLowRes.png"
     );
 }
 
-function GetIllustrationPath(id) {
+function GetIllustrationPath(idOrScore) {
     if (ExampleMode) return ExampleIllustration;
+
+    const specialDiff = _GetSpecialDiff(idOrScore);
+    if (specialDiff.diff) {
+        return PathJoin(
+            window.ASSET_FOLDER,
+            "Tracks",
+            specialDiff.id,
+            `Illustration_${specialDiff.diff}.png`
+        );
+    }
 
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id,
+        specialDiff.id,
         "Illustration.png"
     );
 }
 
-function GetIllustrationBlurPath(id) {
+function GetIllustrationBlurPath(idOrScore) {
     if (ExampleMode) return ExampleIllustration;
+
+    const specialDiff = _GetSpecialDiff(idOrScore);
+    if (specialDiff.diff) {
+        return PathJoin(
+            window.ASSET_FOLDER,
+            "Tracks",
+            specialDiff.id,
+            `IllustrationBlur_${specialDiff.diff}.png`
+        );
+    }
 
     return PathJoin(
         window.ASSET_FOLDER,
         "Tracks",
-        id,
+        specialDiff.id,
         "IllustrationBlur.png"
     );
 }
@@ -320,13 +387,10 @@ function GetRecordCount() {
     return window.PLAYER_DATA.Records.length;
 }
 
-function GetRecordLowResIllustrationPath(record) {
-    return GetLowResIllustrationPath(record.Score.Id);
-}
-
 function GetRecordRankImagePath(record) {
     return GetRecordRankImagePathByType(record.Score.Status)
 }
+
 function GetRecordRankImagePathByType(type) {
     if (ExampleMode) return "./ExampleRank.png";
 
@@ -370,6 +434,7 @@ function GetViewportSize() {
 }
 
 let _setReadyTrue = false
+
 function SetReady(ye) {
     // i don't wanna change too much code so i just call debugger conditionally
     if (ye && !_setReadyTrue) {
@@ -424,8 +489,7 @@ function RandomNumber(min, max) {
 function DeepEquals(x, y) {
     if (x === y) {
         return true;
-    }
-    else if ((typeof x == "object" && x != null) && (typeof y == "object" && y != null)) {
+    } else if ((typeof x == "object" && x != null) && (typeof y == "object" && y != null)) {
         if (Object.keys(x).length !== Object.keys(y).length)
             return false;
 
@@ -433,11 +497,9 @@ function DeepEquals(x, y) {
             if (y.hasOwnProperty(prop)) {
                 if (!DeepEquals(x[prop], y[prop]))
                     return false;
-            }
-            else return false;
+            } else return false;
         }
 
         return true;
-    }
-    else return false;
+    } else return false;
 }

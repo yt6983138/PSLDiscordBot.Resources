@@ -744,7 +744,7 @@
         const thoughts = window.PLAYER_DATA.ExtraArguments.Thoughts;
 
         if (memorablePerformance && thoughts) {
-            document.getElementById("MemorablePerformanceImage").style.backgroundImage = `url("${GetRecordLowResIllustrationPath(memorablePerformance)}")`;
+            document.getElementById("MemorablePerformanceImage").style.backgroundImage = `url("${GetLowResIllustrationPath(memorablePerformance)}")`;
             document.getElementById("MemorablePerformanceRank").firstElementChild.src = GetRecordRankImagePath(memorablePerformance);
             document.getElementById("MemorablePerformance").appendChild(ConvertUnityRichText(thoughts, 16));
             document.getElementById("MemorablePerformanceFirstLine").textContent = `${memorablePerformance.Score.Score} / ${memorablePerformance.Score.Accuracy.toFixed(GetUserPrecisionInt())}%`;

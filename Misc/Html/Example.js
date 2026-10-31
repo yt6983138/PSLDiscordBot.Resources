@@ -144,7 +144,7 @@ function MakeExampleValue() {
             "AvatarId": "もぺもぺ1",
             "BackgroundId": "Aleph-0-"
         },
-        "Records": [
+        "Records":  [
             {
                 "Score": {
                     "Score": 1000000,
@@ -163,7 +163,7 @@ function MakeExampleValue() {
                     "Score": 1000000,
                     "Accuracy": 100,
                     "Id": "BetterGraphicAnimation.ルゼ.0",
-                    "Difficulty": 4,
+                    "Difficulty": 2,
                     "Status": 2
                 },
                 "NameOrDefault": "Better Graphic Animation",
@@ -394,19 +394,6 @@ function MakeExampleValue() {
             },
             {
                 "Score": {
-                    "Score": 997143,
-                    "Accuracy": 99.6826,
-                    "Id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0",
-                    "Difficulty": 2,
-                    "Status": 1
-                },
-                "NameOrDefault": "Compute It With Some Devilish Alcoholic Steampunk Engines",
-                "Name": "Compute It With Some Devilish Alcoholic Steampunk Engines",
-                "ChartConstant": 15.8,
-                "Rks": 15.577901452177521
-            },
-            {
-                "Score": {
                     "Score": 999622,
                     "Accuracy": 99.957985,
                     "Id": "Nhelv.Silentroom.0",
@@ -471,15 +458,15 @@ function MakeExampleValue() {
                 "Rks": 15.540766363506338
             },
             {
-                "Score": {
+                "Score": { // modified for testing
                     "Score": 989870,
                     "Accuracy": 99.33898,
-                    "Id": "Aleph0.LeaF.0",
+                    "Id": "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0",
                     "Difficulty": 2,
                     "Status": 3
                 },
-                "NameOrDefault": "Aleph-0",
-                "Name": "Aleph-0",
+                "NameOrDefault": "what do you want bro",
+                "Name": "what do you want bro",
                 "ChartConstant": 16,
                 "Rks": 15.533393979745824
             },
@@ -508,6 +495,19 @@ function MakeExampleValue() {
                 "Name": "Another Me",
                 "ChartConstant": 15.6,
                 "Rks": 15.482989205577026
+            },
+            {
+                "Score": {
+                    "Score": 997143,
+                    "Accuracy": 99.6826,
+                    "Id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0",
+                    "Difficulty": 2,
+                    "Status": 1
+                },
+                "NameOrDefault": "Compute It With Some Devilish Alcoholic Steampunk Engines",
+                "Name": "Compute It With Some Devilish Alcoholic Steampunk Engines",
+                "ChartConstant": 15.7,
+                "Rks": 15.479306764271817
             },
             {
                 "Score": {
@@ -589,16 +589,16 @@ function MakeExampleValue() {
             },
             {
                 "Score": {
-                    "Score": 943505,
-                    "Accuracy": 99.31068,
-                    "Id": "GVNGlitterVomitusandNeon.SaltySaltUnfold33.0",
+                    "Score": 979080,
+                    "Accuracy": 99.62,
+                    "Id": "Feast远东之宴.茶鸣拾贰律.0",
                     "Difficulty": 2,
-                    "Status": 4
+                    "Status": 3
                 },
-                "NameOrDefault": "G.V.N. (Glitter,Vomitus and Neon)",
-                "Name": "G.V.N. (Glitter,Vomitus and Neon)",
-                "ChartConstant": 15.8,
-                "Rks": 15.31965017343062
+                "NameOrDefault": "Feast远东之宴",
+                "Name": "Feast远东之宴",
+                "ChartConstant": 15.6,
+                "Rks": 15.337648462164811
             }
         ],
         "ExtraArguments": {
@@ -641,443 +641,6 @@ function MakeExampleValue() {
     window.INFO = {
         "Songs": [
             {
-                "Id": "Chronostasis.黒皇帝.0", // this is fake data
-                "Key": "Chronostasis",
-                "Name": "Chronostasis",
-                "Composer": "Maozon",
-                "Illustrator": "Lanota © Noxy Games Inc. ",
-                "PreviewStartTimeSeconds": 42.67,
-                "PreviewEndTimeSeconds": 65.33,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "空の希",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "空の希",
-                        "ChartConstant": 10.1
-                    },
-                    "IN": {
-                        "Charter": "ST AS is XMT",
-                        "ChartConstant": 15.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/music.wav"
-            },
-            {
-                "Id": "Stasis.Maozon.0",
-                "Key": "Stasis",
-                "Name": "Stasis",
-                "Composer": "Maozon",
-                "Illustrator": "Lanota © Noxy Games Inc. ",
-                "PreviewStartTimeSeconds": 42.67,
-                "PreviewEndTimeSeconds": 65.33,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "空の希",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "空の希",
-                        "ChartConstant": 10.1
-                    },
-                    "IN": {
-                        "Charter": "ST AS is XMT",
-                        "ChartConstant": 15.3
-                    },
-                    "AT": {
-                        "Charter": "百九十八",
-                        "ChartConstant": 16.7
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Stasis.Maozon.0/music.wav"
-            },
-            {
-                "Id": "BetterGraphicAnimation.ルゼ.0",
-                "Key": "Better Graphic Animation",
-                "Name": "Better Graphic Animation",
-                "Composer": "ルゼ",
-                "Illustrator": "A-Zero Project",
-                "PreviewStartTimeSeconds": 44,
-                "PreviewEndTimeSeconds": 62.71,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "NerSAN",
-                        "ChartConstant": 6
-                    },
-                    "HD": {
-                        "Charter": "NerSAN",
-                        "ChartConstant": 11.1
-                    },
-                    "IN": {
-                        "Charter": "縱連打の信者☆無極",
-                        "ChartConstant": 15.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/music.wav"
-            },
-            {
-                "Id": "ジングルベルJingleBell.A39沙包P.0",
-                "Key": "ジングルベル(Jingle Bell)",
-                "Name": "ジングルベル(Jingle Bell)",
-                "Composer": "A-39/沙包P",
-                "Illustrator": "爱39的Konya",
-                "PreviewStartTimeSeconds": 23.31,
-                "PreviewEndTimeSeconds": 43.88,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "merry CNrisTimas",
-                        "ChartConstant": 4.5
-                    },
-                    "HD": {
-                        "Charter": "merry XM AS",
-                        "ChartConstant": 8.5
-                    },
-                    "IN": {
-                        "Charter": "NerSANTA vs. BarbarianerSLEDGE",
-                        "ChartConstant": 14.5
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/music.wav"
-            },
-            {
-                "Id": "volcanic.DETROakaルゼ.0",
-                "Key": "volcanic",
-                "Name": "volcanic",
-                "Composer": "DETRO a.k.a. ルゼ",
-                "Illustrator": "あおお/A-ZERO, morph",
-                "PreviewStartTimeSeconds": 111.83,
-                "PreviewEndTimeSeconds": 131.94,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 7.5
-                    },
-                    "HD": {
-                        "Charter": "Rikko",
-                        "ChartConstant": 12.1
-                    },
-                    "IN": {
-                        "Charter": "Ctymax in a volcano, very delicious",
-                        "ChartConstant": 14.7
-                    },
-                    "AT": {
-                        "Charter": "Alloces",
-                        "ChartConstant": 16.6
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/music.wav"
-            },
-            {
-                "Id": "祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0",
-                "Key": "祈 -我ら神祖と共に歩む者なり-",
-                "Name": "祈 -我ら神祖と共に歩む者なり-",
-                "Composer": "光吉猛修 VS 穴山大輔 VS Kai VS 水野健治 VS 大国奏音",
-                "Illustrator": "SEGA (V17AMax modified)",
-                "PreviewStartTimeSeconds": 110.96,
-                "PreviewEndTimeSeconds": 128.22,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Su1fuRikko \"SouRce of the metaveRse\"",
-                        "ChartConstant": 7
-                    },
-                    "HD": {
-                        "Charter": "Su1fuRikko × rN \"judgemeNt fRom the cataStRophy\"",
-                        "ChartConstant": 13.2
-                    },
-                    "IN": {
-                        "Charter": "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩",
-                        "ChartConstant": 16.4
-                    },
-                    "AT": {
-                        "Charter": "フィグロス譜面チーム \"Rikko feat. Ner\" -Pray for \"PHI\"-",
-                        "ChartConstant": 17.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/music.wav"
-            },
-            {
-                "Id": "DistortedFate.Sakuzyo.0",
-                "Key": "Distorted Fate",
-                "Name": "Distorted Fate",
-                "Composer": "Sakuzyo",
-                "Illustrator": "knife美工刀",
-                "PreviewStartTimeSeconds": 99.4,
-                "PreviewEndTimeSeconds": 119.4,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "De Fiance",
-                        "ChartConstant": 8.1
-                    },
-                    "HD": {
-                        "Charter": "Doubt Ful",
-                        "ChartConstant": 13.5
-                    },
-                    "IN": {
-                        "Charter": "Divination Fortune",
-                        "ChartConstant": 16.3
-                    },
-                    "AT": {
-                        "Charter": "unDefined Future",
-                        "ChartConstant": 17.4
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/music.wav"
-            },
-            {
-                "Id": "SATELLITE.かめりあ.0",
-                "Key": "S.A.T.E.L.L.I.T.E.",
-                "Name": "S.A.T.E.L.L.I.T.E.",
-                "Composer": "かめりあ",
-                "Illustrator": "青鸟",
-                "PreviewStartTimeSeconds": 81.2,
-                "PreviewEndTimeSeconds": 101.2,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "XMT wishing upon a satellite",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "B.A.R.B.A.R.I.A.N.E.R.M.A.N.",
-                        "ChartConstant": 9.9
-                    },
-                    "IN": {
-                        "Charter": "L.I.K.E.Y.",
-                        "ChartConstant": 14.3
-                    },
-                    "AT": {
-                        "Charter": "N.E.R.1.9.8.",
-                        "ChartConstant": 16.2
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/music.wav"
-            },
-            {
-                "Id": "狂喜蘭舞.LeaF.0",
-                "Key": "狂喜蘭舞",
-                "Name": "狂喜蘭舞",
-                "Composer": "LeaF",
-                "Illustrator": "DoublePian",
-                "PreviewStartTimeSeconds": 61.56,
-                "PreviewEndTimeSeconds": 79.3,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by 晨",
-                        "ChartConstant": 7
-                    },
-                    "HD": {
-                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by Pcat",
-                        "ChartConstant": 11.7
-                    },
-                    "IN": {
-                        "Charter": "晨",
-                        "ChartConstant": 14.3
-                    },
-                    "AT": {
-                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by 野从&晨",
-                        "ChartConstant": 16.4
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/music.wav"
-            },
-            {
-                "Id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0",
-                "Key": "TECHNOPOLIS 2085",
-                "Name": "TECHNOPOLIS 2085",
-                "Composer": "PRASTIK DANCEFLOOR",
-                "Illustrator": "SEGA (V17AMax modified)",
-                "PreviewStartTimeSeconds": 103.88,
-                "PreviewEndTimeSeconds": 121.79,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "dancing\"L\"ine 2085",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "迟戈 vs. Likey",
-                        "ChartConstant": 10.2
-                    },
-                    "IN": {
-                        "Charter": "CTYMAX ????",
-                        "ChartConstant": 14.1
-                    },
-                    "AT": {
-                        "Charter": "TECHNOXMT vs. LATENCYPOLIS",
-                        "ChartConstant": 15.9
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/music.wav"
-            },
-            {
-                "Id": "Adastraperaspera.RabbitHouse.0",
-                "Key": "Ad astra per aspera",
-                "Name": "Ad astra per aspera",
-                "Composer": "Rabbit House",
-                "Illustrator": "Lyrebird Ferdinant (青鸟&V17AMax Modified)",
-                "PreviewStartTimeSeconds": 60.3,
-                "PreviewEndTimeSeconds": 70.66,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 6.5
-                    },
-                    "HD": {
-                        "Charter": "XMT小咩兔",
-                        "ChartConstant": 12.1
-                    },
-                    "IN": {
-                        "Charter": "Hara小兔组",
-                        "ChartConstant": 16.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/music.wav"
-            },
-            {
-                "Id": "KMoeVIP.ZxNX.0",
-                "Key": "K.Moe (VIP)",
-                "Name": "K.Moe (VIP)",
-                "Composer": "ZxNX",
-                "Illustrator": "BTKCyber (青鸟 modified)",
-                "PreviewStartTimeSeconds": 73,
-                "PreviewEndTimeSeconds": 88,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "R:kko (IMD)",
-                        "ChartConstant": 3
-                    },
-                    "HD": {
-                        "Charter": "R:kko (IMD)",
-                        "ChartConstant": 8.4
-                    },
-                    "IN": {
-                        "Charter": "C.Max (PBM)",
-                        "ChartConstant": 15.9
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/music.wav"
-            },
-            {
-                "Id": "GOODRAGE.EBIMAYO.0",
-                "Key": "GOODRAGE",
-                "Name": "GOODRAGE",
-                "Composer": "EBIMAYO",
-                "Illustrator": "Ctymax feat. EBIMAYO",
-                "PreviewStartTimeSeconds": 90.81,
-                "PreviewEndTimeSeconds": 109.18,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "阿爽",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "阿爽",
-                        "ChartConstant": 8.5
-                    },
-                    "IN": {
-                        "Charter": "Ctymax vs. 阿爽",
-                        "ChartConstant": 16
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/music.wav"
-            },
-            {
-                "Id": "YouaretheMiserable.tpazolite.0",
-                "Key": "You are the Miserable",
-                "Name": "You are the Miserable",
-                "Composer": "t+pazolite",
-                "Illustrator": "Lanota © Noxy Games Inc. ",
-                "PreviewStartTimeSeconds": 117.8,
-                "PreviewEndTimeSeconds": 131.05,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "M3d1uM",
-                        "ChartConstant": 6
-                    },
-                    "HD": {
-                        "Charter": "M3d1uM",
-                        "ChartConstant": 11.7
-                    },
-                    "IN": {
-                        "Charter": "We are the Miserable",
-                        "ChartConstant": 14.1
-                    },
-                    "AT": {
-                        "Charter": "Pat Brick Man Mr.C & Mr.B",
-                        "ChartConstant": 15.8
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/music.wav"
-            },
-            {
-                "Id": "RESSiSTANCE.ぐるたみん.0",
-                "Key": "RESSiSTANCE",
-                "Name": "RESSiSTANCE",
-                "Composer": "ぐるたみん",
-                "Illustrator": "LINUS",
-                "PreviewStartTimeSeconds": 52.68,
-                "PreviewEndTimeSeconds": 81.95,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "其一 呼吸尚存的标志",
-                        "ChartConstant": 6.5
-                    },
-                    "HD": {
-                        "Charter": "其二 向前迈进的理由",
-                        "ChartConstant": 11.2
-                    },
-                    "IN": {
-                        "Charter": "其三 我所存在的证明",
-                        "ChartConstant": 16.1
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/music.wav"
-            },
-            {
                 "Id": "望影の方舟Six.SeURa.0",
                 "Key": "望影の方舟Six",
                 "Name": "望影の方舟Six",
@@ -1085,229 +648,32 @@ function MakeExampleValue() {
                 "Illustrator": "鲸弑",
                 "PreviewStartTimeSeconds": 71.11,
                 "PreviewEndTimeSeconds": 96.51,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "六回目Traveler Scend",
-                        "ChartConstant": 6.5
+                        "ChartConstant": 6.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "六回目Traveler Scend",
-                        "ChartConstant": 11.9
+                        "ChartConstant": 11.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "六回目Traveler Scend as \"Knight of Arq\"",
-                        "ChartConstant": 15.9
+                        "ChartConstant": 15.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/望影の方舟Six.SeURa.0/IllustrationLowRes.jpg",
                 "IllustrationAddressablePath": "Assets/Tracks/望影の方舟Six.SeURa.0/Illustration.jpg",
                 "BlurIllustrationAddressablePath": "Assets/Tracks/望影の方舟Six.SeURa.0/IllustrationBlur.jpg",
                 "MusicAddressablePath": "Assets/Tracks/望影の方舟Six.SeURa.0/music.wav"
-            },
-            {
-                "Id": "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
-                "Key": "DESTRUCTION 3,2,1",
-                "Name": "DESTRUCTION 3,2,1",
-                "Composer": "Normal1zer vs. Broken Nerdz",
-                "Illustrator": "rN",
-                "PreviewStartTimeSeconds": 105.32,
-                "PreviewEndTimeSeconds": 123.96,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "{Demolition,Devastation,Destruction}",
-                        "ChartConstant": 8.5
-                    },
-                    "HD": {
-                        "Charter": "{Devastation,Destruction}",
-                        "ChartConstant": 13.1
-                    },
-                    "IN": {
-                        "Charter": "{Destruction}",
-                        "ChartConstant": 16.3
-                    },
-                    "AT": {
-                        "Charter": "∅",
-                        "ChartConstant": 17.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/music.wav"
-            },
-            {
-                "Id": "Rrharil.TeamGrimoire.0",
-                "Key": "Rrhar'il",
-                "Name": "Rrhar'il",
-                "Composer": "Team Grimoire",
-                "Illustrator": "犀牛坨动画工坊",
-                "PreviewStartTimeSeconds": 84.62,
-                "PreviewEndTimeSeconds": 99.8,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "RDRT -p 19:08:31",
-                        "ChartConstant": 7
-                    },
-                    "HD": {
-                        "Charter": "RDRT -p 20:02:21",
-                        "ChartConstant": 12.7
-                    },
-                    "IN": {
-                        "Charter": "RDRT -p 20:08:31",
-                        "ChartConstant": 16.1
-                    },
-                    "AT": {
-                        "Charter": "RWND -p 16493:62786:92551",
-                        "ChartConstant": 17.6
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/music.wav"
-            },
-            {
-                "Id": "SIGMA.Kryexe.0",
-                "Key": "SIGMA",
-                "Name": "SIGMA",
-                "Composer": "Kry.exe",
-                "Illustrator": "塔塔",
-                "PreviewStartTimeSeconds": 42.24,
-                "PreviewEndTimeSeconds": 62.72,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Barbarianerman.exe",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "Bσrbσriσnermσn.exe",
-                        "ChartConstant": 10.5
-                    },
-                    "IN": {
-                        "Charter": "Bσrbσriσn∑rmσn.∑x∑",
-                        "ChartConstant": 15.8
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/music.wav"
-            },
-            {
-                "Id": "Cthugha.USAO.0",
-                "Key": "Cthugha",
-                "Name": "Cthugha",
-                "Composer": "USAO",
-                "Illustrator": "谷地（青鸟 modified）",
-                "PreviewStartTimeSeconds": 56.9,
-                "PreviewEndTimeSeconds": 79.44,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 6
-                    },
-                    "HD": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 10.4
-                    },
-                    "IN": {
-                        "Charter": "Gausbon",
-                        "ChartConstant": 16
-                    },
-                    "AT": {
-                        "Charter": "百九十八 feat. NerSAN",
-                        "ChartConstant": 16.1
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Cthugha.USAO.0/music.wav"
-            },
-            {
-                "Id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0",
-                "Key": "Compute It With Some Devilish Alcoholic Steampunk Engines",
-                "Name": "Compute It With Some Devilish Alcoholic Steampunk Engines",
-                "Composer": "かめりあ",
-                "Illustrator": "山崎团",
-                "PreviewStartTimeSeconds": 112,
-                "PreviewEndTimeSeconds": 123.64,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Clutter",
-                        "ChartConstant": 5.5
-                    },
-                    "HD": {
-                        "Charter": "Clutter",
-                        "ChartConstant": 10.6
-                    },
-                    "IN": {
-                        "Charter": "Gausbon vs. XMT小咩兔",
-                        "ChartConstant": 15.8
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/music.wav"
-            },
-            {
-                "Id": "Nhelv.Silentroom.0",
-                "Key": "Nhelv",
-                "Name": "Nhelv",
-                "Composer": "Silentroom",
-                "Illustrator": "駿",
-                "PreviewStartTimeSeconds": 67.01,
-                "PreviewEndTimeSeconds": 82.01,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "野从",
-                        "ChartConstant": 1.5
-                    },
-                    "HD": {
-                        "Charter": "StupiGGy",
-                        "ChartConstant": 12
-                    },
-                    "IN": {
-                        "Charter": "森德雷斯 vs. 百九十八",
-                        "ChartConstant": 15.6
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/music.wav"
-            },
-            {
-                "Id": "ERABYECONNEC10N.かめりあ.0",
-                "Key": "+ERABY+E CONNEC+10N",
-                "Name": "+ERABY+E CONNEC+10N",
-                "Composer": "かめりあ",
-                "Illustrator": "猫箱Catbox feat. 祈莲",
-                "PreviewStartTimeSeconds": 75.13,
-                "PreviewEndTimeSeconds": 97.83,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "4B314C3042592B45",
-                        "ChartConstant": 5.5
-                    },
-                    "HD": {
-                        "Charter": "4D45474142592B45",
-                        "ChartConstant": 11.6
-                    },
-                    "IN": {
-                        "Charter": "4731474142592B45",
-                        "ChartConstant": 16.3
-                    },
-                    "AT": {
-                        "Charter": "2B45524142592B45",
-                        "ChartConstant": 17.3
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/music.wav"
             },
             {
                 "Id": "ChronosCollapseLaCampanella.SunsetRay.0",
@@ -1317,18 +683,26 @@ function MakeExampleValue() {
                 "Illustrator": "老张",
                 "PreviewStartTimeSeconds": 12.21,
                 "PreviewEndTimeSeconds": 30.03,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "Pcat『Scatter』",
-                        "ChartConstant": 4.5
+                        "ChartConstant": 4.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "阿爽『Destroy』",
-                        "ChartConstant": 12.5
+                        "ChartConstant": 12.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "NerSAN vs. 阿爽 『Collapse』",
-                        "ChartConstant": 16.3
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ChronosCollapseLaCampanella.SunsetRay.0/IllustrationLowRes.jpg",
@@ -1337,89 +711,45 @@ function MakeExampleValue() {
                 "MusicAddressablePath": "Assets/Tracks/ChronosCollapseLaCampanella.SunsetRay.0/music.wav"
             },
             {
-                "Id": "FracturedAngel.DJRaisei.0",
-                "Key": "Fractured Angel",
-                "Name": "Fractured Angel",
-                "Composer": "DJ Raisei",
-                "Illustrator": "OsuMe65",
-                "PreviewStartTimeSeconds": 67,
-                "PreviewEndTimeSeconds": 81,
+                "Id": "Rrharil.TeamGrimoire.0",
+                "Key": "Rrhar'il",
+                "Name": "Rrhar'il",
+                "Composer": "Team Grimoire",
+                "Illustrator": "犀牛坨动画工坊",
+                "PreviewStartTimeSeconds": 84.62,
+                "PreviewEndTimeSeconds": 99.8,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
-                        "Charter": "Su1fuR",
-                        "ChartConstant": 4
+                        "Charter": "RDRT -p 19:08:31",
+                        "ChartConstant": 7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
-                        "Charter": "Su1fuR",
-                        "ChartConstant": 10.9
+                        "Charter": "RDRT -p 20:02:21",
+                        "ChartConstant": 12.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
-                        "Charter": "逆天使の悪魔 【Likey】",
-                        "ChartConstant": 16.3
+                        "Charter": "RDRT -p 20:08:31",
+                        "ChartConstant": 16.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "RWND -p 16493:62786:92551",
+                        "ChartConstant": 17.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/music.wav"
-            },
-            {
-                "Id": "csqn.Aoi.0",
-                "Key": "c.s.q.n.",
-                "Name": "c.s.q.n.",
-                "Composer": "Aoi",
-                "Illustrator": "Ctymax vs. TNiK feat. 出前",
-                "PreviewStartTimeSeconds": 88.45,
-                "PreviewEndTimeSeconds": 106.21,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "b.b.n.m.",
-                        "ChartConstant": 5
-                    },
-                    "HD": {
-                        "Charter": "h.o.m.e.e.e.",
-                        "ChartConstant": 12.2
-                    },
-                    "IN": {
-                        "Charter": "s.t.p.g.",
-                        "ChartConstant": 15.9
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/csqn.Aoi.0/music.wav"
-            },
-            {
-                "Id": "Aleph0.LeaF.0",
-                "Key": "Aleph-0",
-                "Name": "Aleph-0",
-                "Composer": "LeaF",
-                "Illustrator": "Optie",
-                "PreviewStartTimeSeconds": 11.52,
-                "PreviewEndTimeSeconds": 26.46,
-                "Levels": {
-                    "EZ": {
-                        "Charter": "Clutter",
-                        "ChartConstant": 3.5
-                    },
-                    "HD": {
-                        "Charter": "Clutter",
-                        "ChartConstant": 12.2
-                    },
-                    "IN": {
-                        "Charter": "Clutter",
-                        "ChartConstant": 16
-                    },
-                    "Legacy": {
-                        "Charter": "阿爽 VS Arenn Saki",
-                        "ChartConstant": 15.6
-                    }
-                },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/music.wav"
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Rrharil.TeamGrimoire.0/music.wav"
             },
             {
                 "Id": "Retribution.nmyKryexe.0",
@@ -1429,24 +759,523 @@ function MakeExampleValue() {
                 "Illustrator": "NerSAN",
                 "PreviewStartTimeSeconds": 102.32,
                 "PreviewEndTimeSeconds": 122.53,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "NerSAN",
-                        "ChartConstant": 6
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "NerSAN",
-                        "ChartConstant": 11.6
+                        "ChartConstant": 11.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "Ner as \"SPΔDE\"",
-                        "ChartConstant": 16.2
+                        "ChartConstant": 16.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Retribution.nmyKryexe.0/IllustrationLowRes.jpg",
                 "IllustrationAddressablePath": "Assets/Tracks/Retribution.nmyKryexe.0/Illustration.jpg",
                 "BlurIllustrationAddressablePath": "Assets/Tracks/Retribution.nmyKryexe.0/IllustrationBlur.jpg",
                 "MusicAddressablePath": "Assets/Tracks/Retribution.nmyKryexe.0/music.wav"
+            },
+            {
+                "Id": "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
+                "Key": "DESTRUCTION 3,2,1",
+                "Name": "DESTRUCTION 3,2,1",
+                "Composer": "Normal1zer vs. Broken Nerdz",
+                "Illustrator": "rN",
+                "PreviewStartTimeSeconds": 105.32,
+                "PreviewEndTimeSeconds": 123.96,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "{Demolition,Devastation,Destruction}",
+                        "ChartConstant": 8.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "{Devastation,Destruction}",
+                        "ChartConstant": 13.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "{Destruction}",
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "∅",
+                        "ChartConstant": 17.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/DESTRUCTION321.Normal1zervsBrokenNerdz.0/music.wav"
+            },
+            {
+                "Id": "DistortedFate.Sakuzyo.0",
+                "Key": "Distorted Fate",
+                "Name": "Distorted Fate",
+                "Composer": "Sakuzyo",
+                "Illustrator": "knife美工刀",
+                "PreviewStartTimeSeconds": 99.4,
+                "PreviewEndTimeSeconds": 119.4,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "De Fiance",
+                        "ChartConstant": 8.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Doubt Ful",
+                        "ChartConstant": 13.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Divination Fortune",
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "unDefined Future",
+                        "ChartConstant": 17.4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/DistortedFate.Sakuzyo.0/music.wav"
+            },
+            {
+                "Id": "狂喜蘭舞.LeaF.0",
+                "Key": "狂喜蘭舞",
+                "Name": "狂喜蘭舞",
+                "Composer": "LeaF",
+                "Illustrator": "DoublePian",
+                "PreviewStartTimeSeconds": 61.56,
+                "PreviewEndTimeSeconds": 79.3,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by 晨",
+                        "ChartConstant": 7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by Pcat",
+                        "ChartConstant": 11.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "晨",
+                        "ChartConstant": 14.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "Catcats a.k.a. 無極 vs. H.C.C. fixed by 野从&晨",
+                        "ChartConstant": 16.4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/狂喜蘭舞.LeaF.0/music.wav"
+            },
+            {
+                "Id": "Aleph0.LeaF.0",
+                "Key": "Aleph-0",
+                "Name": "Aleph-0",
+                "Composer": "LeaF",
+                "Illustrator": "Optie",
+                "PreviewStartTimeSeconds": 11.52,
+                "PreviewEndTimeSeconds": 26.46,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Clutter",
+                        "ChartConstant": 3.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Clutter",
+                        "ChartConstant": 12.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Clutter",
+                        "ChartConstant": 16,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "Legacy": {
+                        "Charter": "阿爽 VS Arenn Saki",
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Aleph0.LeaF.0/music.wav"
+            },
+            {
+                "Id": "GOODFORTUNE.EBIMAYO.0",
+                "Key": "GOODFORTUNE",
+                "Name": "GOODFORTUNE",
+                "Composer": "EBIMAYO",
+                "Illustrator": "Ctymax",
+                "PreviewStartTimeSeconds": 102.71,
+                "PreviewEndTimeSeconds": 117.71,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "晨",
+                        "ChartConstant": 7.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "晨",
+                        "ChartConstant": 8.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "晨",
+                        "ChartConstant": 15.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/music.wav"
+            },
+            {
+                "Id": "GOODRAGE.EBIMAYO.0",
+                "Key": "GOODRAGE",
+                "Name": "GOODRAGE",
+                "Composer": "EBIMAYO",
+                "Illustrator": "Ctymax feat. EBIMAYO",
+                "PreviewStartTimeSeconds": 90.81,
+                "PreviewEndTimeSeconds": 109.18,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "阿爽",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "阿爽",
+                        "ChartConstant": 8.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Ctymax vs. 阿爽",
+                        "ChartConstant": 16,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/GOODRAGE.EBIMAYO.0/music.wav"
+            },
+            {
+                "Id": "SIGMA.Kryexe.0",
+                "Key": "SIGMA",
+                "Name": "SIGMA",
+                "Composer": "Kry.exe",
+                "Illustrator": "塔塔",
+                "PreviewStartTimeSeconds": 42.24,
+                "PreviewEndTimeSeconds": 62.72,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Barbarianerman.exe",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Bσrbσriσnermσn.exe",
+                        "ChartConstant": 10.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Bσrbσriσn∑rmσn.∑x∑",
+                        "ChartConstant": 15.8,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/SIGMA.Kryexe.0/music.wav"
+            },
+            {
+                "Id": "volcanic.DETROakaルゼ.0",
+                "Key": "volcanic",
+                "Name": "volcanic",
+                "Composer": "DETRO a.k.a. ルゼ",
+                "Illustrator": "あおお/A-ZERO, morph",
+                "PreviewStartTimeSeconds": 111.83,
+                "PreviewEndTimeSeconds": 131.94,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 7.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Rikko",
+                        "ChartConstant": 12.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Ctymax in a volcano, very delicious",
+                        "ChartConstant": 14.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "Alloces",
+                        "ChartConstant": 16.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/volcanic.DETROakaルゼ.0/music.wav"
+            },
+            {
+                "Id": "BetterGraphicAnimation.ルゼ.0",
+                "Key": "Better Graphic Animation",
+                "Name": "Better Graphic Animation",
+                "Composer": "ルゼ",
+                "Illustrator": "A-Zero Project",
+                "PreviewStartTimeSeconds": 44,
+                "PreviewEndTimeSeconds": 62.71,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "NerSAN",
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "NerSAN",
+                        "ChartConstant": 11.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "縱連打の信者☆無極",
+                        "ChartConstant": 15.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/BetterGraphicAnimation.ルゼ.0/music.wav"
+            },
+            {
+                "Id": "Cthugha.USAO.0",
+                "Key": "Cthugha",
+                "Name": "Cthugha",
+                "Composer": "USAO",
+                "Illustrator": "谷地（青鸟 modified）",
+                "PreviewStartTimeSeconds": 56.9,
+                "PreviewEndTimeSeconds": 79.44,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 10.4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Gausbon",
+                        "ChartConstant": 16,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "百九十八 feat. NerSAN",
+                        "ChartConstant": 16.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Cthugha.USAO.0/music.wav"
+            },
+            {
+                "Id": "Nhelv.Silentroom.0",
+                "Key": "Nhelv",
+                "Name": "Nhelv",
+                "Composer": "Silentroom",
+                "Illustrator": "駿",
+                "PreviewStartTimeSeconds": 67.01,
+                "PreviewEndTimeSeconds": 82.01,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "野从",
+                        "ChartConstant": 1.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "StupiGGy",
+                        "ChartConstant": 12,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "森德雷斯 vs. 百九十八",
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Nhelv.Silentroom.0/music.wav"
+            },
+            {
+                "Id": "Concvssion.Halv.0",
+                "Key": "Concvssion",
+                "Name": "Concvssion",
+                "Composer": "Halv",
+                "Illustrator": "汉堡",
+                "PreviewStartTimeSeconds": 96.02,
+                "PreviewEndTimeSeconds": 117.48,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "J.R",
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "晨",
+                        "ChartConstant": 11.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Phigros Charting Team",
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Concvssion.Halv.0/music.wav"
+            },
+            {
+                "Id": "ジングルベルJingleBell.A39沙包P.0",
+                "Key": "ジングルベル(Jingle Bell)",
+                "Name": "ジングルベル(Jingle Bell)",
+                "Composer": "A-39/沙包P",
+                "Illustrator": "爱39的Konya",
+                "PreviewStartTimeSeconds": 23.31,
+                "PreviewEndTimeSeconds": 43.88,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "merry CNrisTimas",
+                        "ChartConstant": 4.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "merry XM AS",
+                        "ChartConstant": 8.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "NerSANTA vs. BarbarianerSLEDGE",
+                        "ChartConstant": 14.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/ジングルベルJingleBell.A39沙包P.0/music.wav"
             },
             {
                 "Id": "AnotherMe.DAAN.0",
@@ -1456,18 +1285,26 @@ function MakeExampleValue() {
                 "Illustrator": "ZG",
                 "PreviewStartTimeSeconds": 24,
                 "PreviewEndTimeSeconds": 42.28,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "Pcat",
-                        "ChartConstant": 5
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "Another cat",
-                        "ChartConstant": 9.8
+                        "ChartConstant": 9.8,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "NerSAN vs. Ctymax as \"泥头鱼\"",
-                        "ChartConstant": 15.6
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/AnotherMe.DAAN.0/IllustrationLowRes.jpg",
@@ -1483,18 +1320,26 @@ function MakeExampleValue() {
                 "Illustrator": "Arahosi",
                 "PreviewStartTimeSeconds": 87.77,
                 "PreviewEndTimeSeconds": 110.11,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "XMT小咩兔",
-                        "ChartConstant": 5
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "XMT小咩兔",
-                        "ChartConstant": 11.3
+                        "ChartConstant": 11.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "XMT小咩兔",
-                        "ChartConstant": 15.5
+                        "ChartConstant": 15.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/DontNeverAround.HAMA.0/IllustrationLowRes.jpg",
@@ -1503,35 +1348,156 @@ function MakeExampleValue() {
                 "MusicAddressablePath": "Assets/Tracks/DontNeverAround.HAMA.0/music.wav"
             },
             {
-                "Id": "Cthugha.USAO.0",
-                "Key": "Cthugha",
-                "Name": "Cthugha",
-                "Composer": "USAO",
-                "Illustrator": "谷地（青鸟 modified）",
-                "PreviewStartTimeSeconds": 56.9,
-                "PreviewEndTimeSeconds": 79.44,
+                "Id": "RESSiSTANCE.ぐるたみん.0",
+                "Key": "RESSiSTANCE",
+                "Name": "RESSiSTANCE",
+                "Composer": "ぐるたみん",
+                "Illustrator": "LINUS",
+                "PreviewStartTimeSeconds": 52.68,
+                "PreviewEndTimeSeconds": 81.95,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 6
+                        "Charter": "其一 呼吸尚存的标志",
+                        "ChartConstant": 6.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
-                        "Charter": "Barbarianerman",
-                        "ChartConstant": 10.4
+                        "Charter": "其二 向前迈进的理由",
+                        "ChartConstant": 11.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
-                        "Charter": "Gausbon",
-                        "ChartConstant": 16
-                    },
-                    "AT": {
-                        "Charter": "百九十八 feat. NerSAN",
-                        "ChartConstant": 16.1
+                        "Charter": "其三 我所存在的证明",
+                        "ChartConstant": 16.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Cthugha.USAO.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Cthugha.USAO.0/music.wav"
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/RESSiSTANCE.ぐるたみん.0/music.wav"
+            },
+            {
+                "Id": "YouaretheMiserable.tpazolite.0",
+                "Key": "You are the Miserable",
+                "Name": "You are the Miserable",
+                "Composer": "t+pazolite",
+                "Illustrator": "Lanota © Noxy Games Inc. ",
+                "PreviewStartTimeSeconds": 117.8,
+                "PreviewEndTimeSeconds": 131.05,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "M3d1uM",
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "M3d1uM",
+                        "ChartConstant": 11.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "We are the Miserable",
+                        "ChartConstant": 14.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "Pat Brick Man Mr.C & Mr.B",
+                        "ChartConstant": 15.8,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/YouaretheMiserable.tpazolite.0/music.wav"
+            },
+            {
+                "Id": "Stasis.Maozon.0",
+                "Key": "Stasis",
+                "Name": "Stasis",
+                "Composer": "Maozon",
+                "Illustrator": "Lanota © Noxy Games Inc. ",
+                "PreviewStartTimeSeconds": 42.67,
+                "PreviewEndTimeSeconds": 65.33,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "空の希",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "空の希",
+                        "ChartConstant": 10.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "ST AS is XMT",
+                        "ChartConstant": 15.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "百九十八",
+                        "ChartConstant": 16.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Stasis.Maozon.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Stasis.Maozon.0/music.wav"
+            },
+            {
+                "Id": "csqn.Aoi.0",
+                "Key": "c.s.q.n.",
+                "Name": "c.s.q.n.",
+                "Composer": "Aoi",
+                "Illustrator": "Ctymax vs. TNiK feat. 出前",
+                "PreviewStartTimeSeconds": 88.45,
+                "PreviewEndTimeSeconds": 106.21,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "b.b.n.m.",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "h.o.m.e.e.e.",
+                        "ChartConstant": 12.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "s.t.p.g.",
+                        "ChartConstant": 15.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/csqn.Aoi.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/csqn.Aoi.0/music.wav"
             },
             {
                 "Id": "ElCondorPasaPhigrosEdit.PlasticFruits.0",
@@ -1541,18 +1507,26 @@ function MakeExampleValue() {
                 "Illustrator": "青鸟",
                 "PreviewStartTimeSeconds": 76.8,
                 "PreviewEndTimeSeconds": 91.2,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "TimiTini",
-                        "ChartConstant": 6.5
+                        "ChartConstant": 6.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "TimiTini",
-                        "ChartConstant": 12.5
+                        "ChartConstant": 12.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "XMT小咩兔",
-                        "ChartConstant": 15.6
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ElCondorPasaPhigrosEdit.PlasticFruits.0/IllustrationLowRes.jpg",
@@ -1561,31 +1535,226 @@ function MakeExampleValue() {
                 "MusicAddressablePath": "Assets/Tracks/ElCondorPasaPhigrosEdit.PlasticFruits.0/music.wav"
             },
             {
-                "Id": "GOODFORTUNE.EBIMAYO.0",
-                "Key": "GOODFORTUNE",
-                "Name": "GOODFORTUNE",
-                "Composer": "EBIMAYO",
-                "Illustrator": "Ctymax",
-                "PreviewStartTimeSeconds": 102.71,
-                "PreviewEndTimeSeconds": 117.71,
+                "Id": "Feast远东之宴.茶鸣拾贰律.0",
+                "Key": "Feast远东之宴",
+                "Name": "Feast远东之宴",
+                "Composer": "茶鸣拾贰律",
+                "Illustrator": "茶鸣拾贰律",
+                "PreviewStartTimeSeconds": 37.5,
+                "PreviewEndTimeSeconds": 67.5,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
-                        "Charter": "晨",
-                        "ChartConstant": 7.5
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 6.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
-                        "Charter": "晨",
-                        "ChartConstant": 8.7
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 12.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
-                        "Charter": "晨",
-                        "ChartConstant": 15.7
+                        "Charter": "Gino",
+                        "ChartConstant": 15.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/GOODFORTUNE.EBIMAYO.0/music.wav"
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Feast远东之宴.茶鸣拾贰律.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Feast远东之宴.茶鸣拾贰律.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Feast远东之宴.茶鸣拾贰律.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Feast远东之宴.茶鸣拾贰律.0/music.wav"
+            },
+            {
+                "Id": "Adastraperaspera.RabbitHouse.0",
+                "Key": "Ad astra per aspera",
+                "Name": "Ad astra per aspera",
+                "Composer": "Rabbit House",
+                "Illustrator": "Lyrebird Ferdinant (青鸟&V17AMax Modified)",
+                "PreviewStartTimeSeconds": 60.3,
+                "PreviewEndTimeSeconds": 70.66,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Barbarianerman",
+                        "ChartConstant": 6.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "XMT小咩兔",
+                        "ChartConstant": 12.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Hara小兔组",
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Adastraperaspera.RabbitHouse.0/music.wav"
+            },
+            {
+                "Id": "SATELLITE.かめりあ.0",
+                "Key": "S.A.T.E.L.L.I.T.E.",
+                "Name": "S.A.T.E.L.L.I.T.E.",
+                "Composer": "かめりあ",
+                "Illustrator": "青鸟",
+                "PreviewStartTimeSeconds": 81.2,
+                "PreviewEndTimeSeconds": 101.2,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "XMT wishing upon a satellite",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "B.A.R.B.A.R.I.A.N.E.R.M.A.N.",
+                        "ChartConstant": 9.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "L.I.K.E.Y.",
+                        "ChartConstant": 14.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "N.E.R.1.9.8.",
+                        "ChartConstant": 16.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/SATELLITE.かめりあ.0/music.wav"
+            },
+            {
+                "Id": "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0",
+                "Key": "Compute It With Some Devilish Alcoholic Steampunk Engines",
+                "Name": "Compute It With Some Devilish Alcoholic Steampunk Engines",
+                "Composer": "かめりあ",
+                "Illustrator": "山崎团",
+                "PreviewStartTimeSeconds": 112,
+                "PreviewEndTimeSeconds": 123.64,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Clutter",
+                        "ChartConstant": 5.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Clutter",
+                        "ChartConstant": 10.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Gausbon vs. XMT小咩兔",
+                        "ChartConstant": 15.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0/music.wav"
+            },
+            {
+                "Id": "ERABYECONNEC10N.かめりあ.0",
+                "Key": "+ERABY+E CONNEC+10N",
+                "Name": "+ERABY+E CONNEC+10N",
+                "Composer": "かめりあ",
+                "Illustrator": "猫箱Catbox feat. 祈莲",
+                "PreviewStartTimeSeconds": 75.13,
+                "PreviewEndTimeSeconds": 97.83,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "4B314C3042592B45",
+                        "ChartConstant": 5.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "4D45474142592B45",
+                        "ChartConstant": 11.6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "4731474142592B45",
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "2B45524142592B45",
+                        "ChartConstant": 17.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/ERABYECONNEC10N.かめりあ.0/music.wav"
+            },
+            {
+                "Id": "FracturedAngel.DJRaisei.0",
+                "Key": "Fractured Angel",
+                "Name": "Fractured Angel",
+                "Composer": "DJ Raisei",
+                "Illustrator": "OsuMe65",
+                "PreviewStartTimeSeconds": 67,
+                "PreviewEndTimeSeconds": 81,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Su1fuR",
+                        "ChartConstant": 4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Su1fuR",
+                        "ChartConstant": 10.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "逆天使の悪魔 【Likey】",
+                        "ChartConstant": 16.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/FracturedAngel.DJRaisei.0/music.wav"
             },
             {
                 "Id": "InvertedWorld.ARForest.0",
@@ -1595,18 +1764,26 @@ function MakeExampleValue() {
                 "Illustrator": "Mechari (青鸟 modified)",
                 "PreviewStartTimeSeconds": 84.03,
                 "PreviewEndTimeSeconds": 102.69,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
                         "Charter": "Clutter",
-                        "ChartConstant": 5.5
+                        "ChartConstant": 5.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
                         "Charter": "ɹǝʇʇnlƆ",
-                        "ChartConstant": 11.2
+                        "ChartConstant": 11.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
                         "Charter": "ƃuɐnɥs∀ .sʌ uoqsnɐ⅁",
-                        "ChartConstant": 15.5
+                        "ChartConstant": 15.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
                 "LowResolutionIllustrationAddressablePath": "Assets/Tracks/InvertedWorld.ARForest.0/IllustrationLowRes.jpg",
@@ -1615,58 +1792,197 @@ function MakeExampleValue() {
                 "MusicAddressablePath": "Assets/Tracks/InvertedWorld.ARForest.0/music.wav"
             },
             {
-                "Id": "Concvssion.Halv.0",
-                "Key": "Concvssion",
-                "Name": "Concvssion",
-                "Composer": "Halv",
-                "Illustrator": "汉堡",
-                "PreviewStartTimeSeconds": 96.02,
-                "PreviewEndTimeSeconds": 117.48,
+                "Id": "TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0",
+                "Key": "TECHNOPOLIS 2085",
+                "Name": "TECHNOPOLIS 2085",
+                "Composer": "PRASTIK DANCEFLOOR",
+                "Illustrator": "SEGA (V17AMax modified)",
+                "PreviewStartTimeSeconds": 103.88,
+                "PreviewEndTimeSeconds": 121.79,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
-                        "Charter": "J.R",
-                        "ChartConstant": 6
+                        "Charter": "dancing\"L\"ine 2085",
+                        "ChartConstant": 5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
-                        "Charter": "晨",
-                        "ChartConstant": 11.3
+                        "Charter": "迟戈 vs. Likey",
+                        "ChartConstant": 10.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
-                        "Charter": "Phigros Charting Team",
-                        "ChartConstant": 15.6
+                        "Charter": "CTYMAX ????",
+                        "ChartConstant": 14.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "TECHNOXMT vs. LATENCYPOLIS",
+                        "ChartConstant": 15.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/Concvssion.Halv.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/Concvssion.Halv.0/music.wav"
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0/music.wav"
             },
             {
-                "Id": "GVNGlitterVomitusandNeon.SaltySaltUnfold33.0",
-                "Key": "G.V.N. (Glitter,Vomitus and Neon)",
-                "Name": "G.V.N. (Glitter,Vomitus and Neon)",
-                "Composer": "Salty Salt & Unfold33",
-                "Illustrator": "祈莲",
-                "PreviewStartTimeSeconds": 100.81,
-                "PreviewEndTimeSeconds": 115.72,
+                "Id": "祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0",
+                "Key": "祈 -我ら神祖と共に歩む者なり-",
+                "Name": "祈 -我ら神祖と共に歩む者なり-",
+                "Composer": "光吉猛修 VS 穴山大輔 VS Kai VS 水野健治 VS 大国奏音",
+                "Illustrator": "SEGA (V17AMax modified)",
+                "PreviewStartTimeSeconds": 110.96,
+                "PreviewEndTimeSeconds": 128.22,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
                 "Levels": {
                     "EZ": {
-                        "Charter": "B.B.M.",
-                        "ChartConstant": 5
+                        "Charter": "Su1fuRikko \"SouRce of the metaveRse\"",
+                        "ChartConstant": 7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "HD": {
-                        "Charter": "B.B.M.",
-                        "ChartConstant": 9.7
+                        "Charter": "Su1fuRikko × rN \"judgemeNt fRom the cataStRophy\"",
+                        "ChartConstant": 13.2,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     },
                     "IN": {
-                        "Charter": "A.S.H.",
-                        "ChartConstant": 15.8
+                        "Charter": "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩",
+                        "ChartConstant": 16.4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "AT": {
+                        "Charter": "フィグロス譜面チーム \"Rikko feat. Ner\" -Pray for \"PHI\"-",
+                        "ChartConstant": 17.3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
                     }
                 },
-                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/GVNGlitterVomitusandNeon.SaltySaltUnfold33.0/IllustrationLowRes.jpg",
-                "IllustrationAddressablePath": "Assets/Tracks/GVNGlitterVomitusandNeon.SaltySaltUnfold33.0/Illustration.jpg",
-                "BlurIllustrationAddressablePath": "Assets/Tracks/GVNGlitterVomitusandNeon.SaltySaltUnfold33.0/IllustrationBlur.jpg",
-                "MusicAddressablePath": "Assets/Tracks/GVNGlitterVomitusandNeon.SaltySaltUnfold33.0/music.wav"
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音.0/music.wav"
+            },
+            {
+                "Id": "KMoeVIP.ZxNX.0",
+                "Key": "K.Moe (VIP)",
+                "Name": "K.Moe (VIP)",
+                "Composer": "ZxNX",
+                "Illustrator": "BTKCyber (青鸟 modified)",
+                "PreviewStartTimeSeconds": 73,
+                "PreviewEndTimeSeconds": 88,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "R:kko (IMD)",
+                        "ChartConstant": 3,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "R:kko (IMD)",
+                        "ChartConstant": 8.4,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "C.Max (PBM)",
+                        "ChartConstant": 15.9,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/KMoeVIP.ZxNX.0/music.wav"
+            },
+            { // testing
+                "Id": "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0",
+                "Key": "What do you want more than a Happy ending?",
+                "Name": "What do you want more than a Happy ending?",
+                "Composer": "Apo11o\"HALO\"program ft. 安月名 莉子×大瀬良あい",
+                "Illustrator": "Amor fati",
+                "PreviewStartTimeSeconds": 60.55,
+                "PreviewEndTimeSeconds": 78.9,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "欢迎回到 Phigros！",
+                        "ChartConstant": 0.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": true
+                    },
+                    "HD": {
+                        "Charter": "欢迎回到 Phigros！",
+                        "ChartConstant": 11.5,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": true
+                    },
+                    "IN": {
+                        "Charter": "欢迎回到 Phigros！",
+                        "ChartConstant": 16.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": true
+                    },
+                    "AT": {
+                        "Charter": "欢迎回到 Phigros！",
+                        "ChartConstant": 17.1,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": true
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0/music.wav"
+            },
+            {
+                "Id": "Chronostasis.黒皇帝.0",
+                "Key": "Chronostasis",
+                "Name": "Chronostasis",
+                "Composer": "黒皇帝",
+                "Illustrator": "Sand",
+                "PreviewStartTimeSeconds": 36.28,
+                "PreviewEndTimeSeconds": 51.51,
+                "IsCNLimited": false,
+                "PreviewClipDifficulty": null,
+                "Levels": {
+                    "EZ": {
+                        "Charter": "Uvernight",
+                        "ChartConstant": 6,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "HD": {
+                        "Charter": "Uvernight",
+                        "ChartConstant": 10.7,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    },
+                    "IN": {
+                        "Charter": "Gausbon fixed by XMT",
+                        "ChartConstant": 16,
+                        "HasDifferentMusic": false,
+                        "HasDifferentCover": false
+                    }
+                },
+                "LowResolutionIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationLowRes.jpg",
+                "IllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/Illustration.jpg",
+                "BlurIllustrationAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/IllustrationBlur.jpg",
+                "MusicAddressablePath": "Assets/Tracks/Chronostasis.黒皇帝.0/music.wav"
             }
         ],
         "Chapters": [
